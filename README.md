@@ -8,6 +8,8 @@ working habits.
 ## 🚀 About Me
 Hi, I am Brent Singh, as software tester from sunny South Africa. Throughout my 10+ year career I have aimed to used the knowledge and skills gained in order to collaborate and provide an innovative end-to-end testing strategy that utilizes all tools which are currently available, including test automation on all levels of the application framework.
 
+Current project stack: Pytest on AWS for API and integration testing.
+
 
 ## 🔗 Links
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/brent-singh-83221913/)
