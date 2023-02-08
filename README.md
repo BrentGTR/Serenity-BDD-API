@@ -30,7 +30,23 @@ Refactors are sometimes needed for easily identifying elements in GUI projects. 
 
 Page object model not used as scope of project is well defined and limited
 
- 
+
+## Project details
+
+The code is a BDD test using Serenity BDD framework. It tests the functionality of the "Search product" feature in a REST API.
+
+The feature file defines a single scenario that describes the steps to test the search product functionality. The "Background" section specifies that a GET request to the product endpoint should return a 200 status code. The scenario outline specifies that when the "search product endpoint" is called with a product name, it should verify that the product should be present in the search results and the schema of the response should match with the "search_product.json" specification.
+
+The step definitions for the feature file are provided in the "SearchStepDefs" class. It uses the SerenityRest class to make REST API requests and perform assertions. The class has methods for each step defined in the scenario.
+
+- The "iCallTheSearchProductEndpointProduct" method makes a GET request to the "search product endpoint" with the product name as a parameter.
+- The "iVerifyProductShouldBeInSearchResults" method performs two assertions to check that the product name is present in the search results.
+- The "theSchemaShouldMatchWithTheSpecificationDefinedIn" method verifies that the response's schema matches the "search_product.json" specification.
+- The "iVerifyThatANotFoundErrorShouldBeDisplayedInSearchResults" and "iVerifyThatAnUnauthorizedErrorShouldBeDisplayedInSearchResult" methods check for the 404 and 401 status codes respectively and verify the error details in the response body.
+- The "iGetAFromTheProductEndpoint" method makes a GET request to the product endpoint and checks for the expected status code.
+
+The "CommonActions" class provides methods for common actions that can be used in multiple scenarios. It has methods to verify the API response status code, verify that the response list is not an empty list, and verify the response schema with a given JSON file.
+
 
 ## Run Locally
 
